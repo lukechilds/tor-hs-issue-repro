@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+test() {
+  for dir in tor/data/*
+  do
+    (
+      hs=$(cat $dir/hostname)
+      curl -s --socks5-hostname 127.0.0.1:9050 http://$hs | grep --silent Server \
+        && echo -n "/" \
+        || echo -n "X"
+    ) &
+  done
+  wait
+  echo
+}
+
+echo "Starting services..."
+docker compose up -d
+sleep 1
+echo
+echo "Created $(ls tor/data | wc -l) hidden services"
+
+echo
+echo "Testing hidden services..."
+echo "/ = up    X = down"
+echo
+test
+
+echo
+echo "Waiting 10 seconds..."
+sleep 10
+test
+
+echo
+echo "Waiting 10 seconds..."
+sleep 10
+test
+
+echo
+echo "Waiting 10 seconds..."
+sleep 10
+test
+
+echo
+echo "Waiting 10 seconds..."
+sleep 10
+test
+
+echo
+echo "Stopping services..."
+docker compose down

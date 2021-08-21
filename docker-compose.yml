@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+        tor:
+                build: .
+                user: toruser
+                volumes:
+                    - ${PWD}/tor/torrc:/etc/tor/torrc
+                    - ${PWD}/tor/data:/var/lib/tor/
+        # tor1:
+        #         build: .
+        #         user: toruser
+        #         volumes:
+        #             - ${PWD}/tor/torrc1:/etc/tor/torrc
+        #             - ${PWD}/tor/data:/var/lib/tor/
+        # tor2:
+        #         build: .
+        #         user: toruser
+        #         volumes:
+        #             - ${PWD}/tor/torrc2:/etc/tor/torrc
+        #             - ${PWD}/tor/data:/var/lib/tor/
+        # tor3:
+        #         build: .
+        #         user: toruser
+        #         volumes:
+        #             - ${PWD}/tor/torrc3:/etc/tor/torrc
+        #             - ${PWD}/tor/data:/var/lib/tor/
+        # tor4:
+        #         build: .
+        #         user: toruser
+        #         volumes:
+        #             - ${PWD}/tor/torrc4:/etc/tor/torrc
+        #             - ${PWD}/tor/data:/var/lib/tor/
+        # tor5:
+        #         build: .
+        #         user: toruser
+        #         volumes:
+        #             - ${PWD}/tor/torrc5:/etc/tor/torrc
+        #             - ${PWD}/tor/data:/var/lib/tor/
+        # tor6:
+        #         build: .
+        #         user: toruser
+        #         volumes:
+        #             - ${PWD}/tor/torrc6:/etc/tor/torrc
+        #             - ${PWD}/tor/data:/var/lib/tor/
+        nginx:
+                image: nginxdemos/hello:plain-text

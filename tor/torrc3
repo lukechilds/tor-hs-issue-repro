@@ -1,0 +1,31 @@
+
+
+HiddenServiceDir /var/lib/tor/hs-4-21
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-22
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-23
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-24
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-25
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-26
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-27
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-28
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-29
+HiddenServicePort 80 nginx:80
+
+HiddenServiceDir /var/lib/tor/hs-4-30
+HiddenServicePort 80 nginx:80
